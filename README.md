@@ -23,6 +23,53 @@ Things you may want to cover:
 
 * ...
 
+## userテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|groups|string|null: false|
+|messages|string||
+
+### Association
+- has_many :messages
+- has_many :groups
+
+-----------------------
+-----------------------
+
+## groupテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|users|string|null: false|
+|messages|text|null: false|
+
+
+### Association
+- has_many :users
+- has_many :messages
+
+-----------------------
+-----------------------
+
+
+## messageテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user|string|null: false|
+|group|string|null: false|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+-----------------------
+-----------------------
+
 
 ## groups_usersテーブル
 
@@ -35,15 +82,7 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
-## userテーブル
+-----------------------
+-----------------------
 
-|Column|Type|Options|
-|------|----|-------|
-|user_name|string|null: false|
-|e-mail|string|null: false|
-|password|string|null: false|
-
-### Association
-- has_many :messages
-- has_many :groups
-- has_many :
+## 
