@@ -28,9 +28,22 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+## userテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_name|string|null: false|
+|e-mail|string|null: false|
+|password|string|null: false|
+
+### Association
+- has_many :messages
+- has_many :groups
+- has_many :
