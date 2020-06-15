@@ -27,15 +27,14 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|groups|string|null: false|
-|messages|string||
+
 
 ### Association
 - has_many :messages
-- has_many :groups
+- has_many :groups, through: :groups_users
 
 -----------------------
 -----------------------
@@ -44,13 +43,12 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|users|string|null: false|
-|messages|text|null: false|
+|name|string|null: false|
 
 
 ### Association
 - has_many :users
-- has_many :messages
+- has_many :messages, through: :groups_users
 
 -----------------------
 -----------------------
@@ -60,8 +58,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user|string|null: false|
-|group|string|null: false|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
+|text|string|null: false|
+|image|string|null: false|
 
 ### Association
 - belongs_to :user
