@@ -9,9 +9,13 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   # config.secret_key = 'aa259b89fbaa60236752bc5025a79f9abae45d21f3ade9e3ec71b499f7a7473ec1a5ce41506aa61b90fad71cd21e8129e5ed43fae08243969643063a9e1bc5f8'
 =======
   # config.secret_key = 'cc37689e778e9bb4677db914577dc8fda2d02cb867d6e0cca0e50a557a21a3a050186ddcc9c5fa39ec2a84eb31d12082d3a4bd4eaeae340743ef3f911460f9a2'
+>>>>>>> Stashed changes
+=======
+  # config.secret_key = 'd75ff98a599f89049d5b0cc721c1f1a1527cc3666e1ee1bf9ffe2bb1af52308d1af7033fba2fb6a67432534f1e7dc6cabf685d5d8a0bb76760e902f9032eeff3'
 >>>>>>> Stashed changes
 
   # ==> Controller configuration
@@ -119,9 +123,13 @@ Devise.setup do |config|
 
   # Set up a pepper to generate the hashed password.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   # config.pepper = '6b1e495837399e2e9ac87e4b2d5311ee3082d9d279a53c1fd378d1bdfdde255d2a74d6a474aac7094f6739aad9323c172a906419b3e2f78f3e1f92d187c97913'
 =======
   # config.pepper = 'd94a6cc5ec96caa1ea5d7dfa3b39e9c18d97007c2a14b3cc8472b8f85c85c4c4a282ce0de00233e678ba2243cbf42cc818d0bfc3e575d291890e1ac7846f8a81'
+>>>>>>> Stashed changes
+=======
+  # config.pepper = 'cd698ea1e4402e57c4447b4855aa045e46080dfbebc41ea1d3735e1930b7e56399e786414402c68e9b62ce7f418628f560ac0ee9b08b98de04a5a2b83e24efc2'
 >>>>>>> Stashed changes
 
   # Send a notification to the original email when the user's email is changed.
