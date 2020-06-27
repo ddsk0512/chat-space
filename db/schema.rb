@@ -11,9 +11,13 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 20200621091641) do
 =======
 ActiveRecord::Schema.define(version: 20200625051603) do
+>>>>>>> Stashed changes
+=======
+ActiveRecord::Schema.define(version: 20200627005255) do
 >>>>>>> Stashed changes
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

@@ -2,6 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 >>>>>>> Stashed changes
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -21,4 +22,10 @@ end
 end
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+end
 >>>>>>> Stashed changes
