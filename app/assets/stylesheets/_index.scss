@@ -27,20 +27,25 @@
             background-color: #2f3e51;
             width: 300px;
             height: calc(100vh - 100px);
-            &__wrapper {
+            text-decoration: none;
+            .group {
                 height: 91px;
                 padding-top: 20px;
                 padding-left: 20px;
-                color: #fff;
-                &--name {
+                &-link {
+                    text-decoration: none;
+                }
+                &__name {
+                    color: #fff;
                     font-weight: bold;
                     font-size: 15px;
                 }
-                &--coment {
+                &__message {
                     font-weight: normal;
                     font-size: 11px;
                     margin-top: 5px;
-                    padding-bottom: 40px;
+                    margin-bottom: 40px;
+                    color: #fff;
                 }
             }
         }
