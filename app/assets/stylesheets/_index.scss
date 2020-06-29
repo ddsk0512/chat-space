@@ -96,33 +96,28 @@
         height: calc(100vh - 190px);
         background-color: #fafafa;
         .message {
-            .upper-message {
-                &__user-name {}
-                &__date {}
-            }
-            .lower-message {
-                &__content {}
-                &__image {}
-            }
-        }
-        &__box {
             padding-top: 35px;
             padding-left: 40px;
-            &--name {
-                color: #333333;
-                font-size: 16px;
-                margin-bottom: 12px;
+            .upper-message {
                 display: flex;
-                &--time {
+                &__user-name {
+                    color: #333333;
+                    font-size: 16px;
+                    margin-bottom: 12px;
+                }
+                &__date {
                     color: #999999;
                     font-size: 12px;
                     margin-left: 8px;
                 }
             }
-            &--message {
-                color: #434a54;
-                font-size: 14px;
-                padding-bottom: 11px;
+            .lower-message {
+                &__content {
+                    color: #434a54;
+                    font-size: 14px;
+                    padding-bottom: 11px;
+                }
+                &__image {}
             }
         }
     }
@@ -130,14 +125,20 @@
         height: 90px;
         padding: 20px 40px;
         background-color: #ddd;
-        display: flex;
+        position: relative;
         &__message {
             height: 50px;
-            width: 100%;
+            width: calc(100% - 115px);
             align-items: center;
             border: none;
+            float: left;
         }
         &__mask {
+            position: absolute;
+            top: 30px;
+            right: 170px;
+            font-size: 1.3em;
+            cursor: pointer;
             .hidden {
                 display: none;
             }
@@ -150,6 +151,7 @@
             background-color: #38aef0;
             color: white;
             cursor: pointer;
+            float: right;
         }
     }
 }
