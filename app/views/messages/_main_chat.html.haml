@@ -1,21 +1,17 @@
 .chat-main
-  .chat-main__group-info
-    .chat-main__group-info__left
-      .chat-main__group-info__left__room--name
+  .group-info
+    .group-info__left
+      .group-info__left-groupname
         test
-      .chat-main__group-info__left__room--member
-        Member : 
-        .chat-main__group-info__left__room--member--name
-          masa
-
-    .chat-main__group-info__right
-      .chat-main__group-info__right--edit
-        = link_to "#", class: "chat-main__group-info__right--edit" do
-          Edit
+      .group-info__left-member
+        Member: masa
+    .group-info__right
+      = link_to "#", class: "group-info__right-edit" do
+        Edit
 
   .messages
     = render @messages
-    
+
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
@@ -24,11 +20,3 @@
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'form__submit'
-
-  .chat-main__message-form
-    .chat-main__message-form-inputbox
-      %input.text{type: "text", placeholder: "type a message"}
-      %label{class: "input-box__image"}
-        = icon('fas', 'image')
-        %input.file{type: "file"}
-      %input.submit{type: "submit", value: "send"}
