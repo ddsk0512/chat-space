@@ -2,11 +2,15 @@
   .group-info
     .group-info__left
       .group-info__left-groupname
-        
+        = @group_name
       .group-info__left-member
-        Member: masa
+        Member:
+        - @group_users.each do |group_users|
+          = group_users.name
+          
+        
     .group-info__right
-      = link_to "#", class: "group-info__right-edit" do
+      = link_to "/groups/#{@group_id}/edit", class: "group-info__right-edit" do
         Edit
 
   .messages
